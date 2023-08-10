@@ -2,7 +2,7 @@
 /**
  *main - Entry point
  *Description: 'program prints some texts without printf'
- *@parameter: There is no parameter
+ *@parameter: None
  *Return: Always 0 (Success)
  */
 int main(void)
