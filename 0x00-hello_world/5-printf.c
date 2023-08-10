@@ -9,6 +9,6 @@ int main(void)
 *function to print some texts
 *using printf
 */
-{printf(stderr, "with proper grammar, but the outcome is a piece of art, ");
+{printf(stderr, "with proper grammar,but the outcome is a piece of art, ");
 return (0);
 }
