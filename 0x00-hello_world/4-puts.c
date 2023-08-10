@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
-*function to 
+*function to
 *print texts
 */
 int main(void)
