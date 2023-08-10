@@ -1,13 +1,13 @@
 #include <stdio.h>
+#include <unistd.h>
+
 /**
-*Main - Entry point
-*Description: 'program prints some texts to the standard error'
-*Return: Always 1 (Success)
+*main - Entry point 
+*Description: "prints some text followed by a new line, to the standard error."
+*Return: Always 0 (Success)
 */
 int main(void)
-/*
-*function to print some texts
-*using to the standard error
-*/
-{fprintf(stderr, "%s", "and that piece of art is useful\" - Dora Korpar, 2015-10-19,\n");
+{
+write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 return (1);
+}
