@@ -1,5 +1,8 @@
 #include <stdio.h>
-#function to print texts
+/*
+ * function to 
+ * print texts
+ */
 int main(void)
 /*
 *function to print some texts
