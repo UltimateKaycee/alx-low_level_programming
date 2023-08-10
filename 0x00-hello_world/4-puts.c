@@ -2,7 +2,6 @@
 /**
  *main - Entry point
  *Description: 'program prints some texts without printf'
- *@parameter: None
  *Return: Always 0 (Success)
  */
 int main(void)
