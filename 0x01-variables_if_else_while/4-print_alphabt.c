@@ -10,7 +10,6 @@ int cha;
 for (cha = 'a'; cha <= 'z'; cha++)
 putchar(cha);
 for (cha = 'A'; cha <= 'Z'; cha++)
-putchar(cha);
 putchar('\n');
 return (0);
 }
