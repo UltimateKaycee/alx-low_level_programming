@@ -1,15 +1,20 @@
 #include <stdio.h>
 /**
-* main - Entry point
-*Description: "prints the alphabet in lowercase, and then in uppercase, followed by a new line"
-*Return: Always 0 (Success)
+*main - entry point
+*Description: "prints the alphabet in lowercase except q and e."
+*Return: Aways 0 (Sucess)
 */
 int main(void)
 {
-int cha;
-for (cha = 'a'; cha <= 'z'; cha++)
+char cha = 'a';
+while (cha <= 'z')
+{
+if (cha != 'e' && cha != 'q')
+{
 putchar(cha);
-for (cha = 'A'; cha <= 'Z'; cha++)
+}
+cha++;
+}
 putchar('\n');
 return (0);
 }
