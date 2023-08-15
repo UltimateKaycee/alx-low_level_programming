@@ -5,7 +5,7 @@
 *Return: Always 0 (success)
 */
 void print_alphabet(void)
-//Description: "function to print alphabets in lowercase followed by a new line"
+//Description: function to print alphabets in lowercase followed by a new line
 {
 char cha;
 cha = 'a';
