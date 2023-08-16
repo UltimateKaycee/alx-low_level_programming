@@ -8,7 +8,7 @@
 void times_table(void)
 {
 	int ina, jar, kar;
-	
+
 	for (ina = 0; ina < 10; ina++)
 	{
 	for (jar = 0; jar < 10; jar++)
