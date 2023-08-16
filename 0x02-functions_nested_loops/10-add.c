@@ -1,16 +1,15 @@
 #include "main.h"
 /**
 * add - adds two integers and returns the result
-* @ana: int to be added to bana
-* @bana: int to be added to ana
-* 
-* Return: sum of ana and bana
+* @a: int to be added to b
+* @b: int to be added to a
+* Return: sum of a and b
 */
-int add (int ana, int bana)
+int add(int a, int b)
 {
-	int cata;
+	int c;
 
-	cata = ana + bana;
+	c = a + b;
 
-	return (cata);
+	return (c);
 }
