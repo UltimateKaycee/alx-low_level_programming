@@ -1,48 +1,48 @@
 #include "main.h"
 /**
-* print_times_table - prints the n
+* print_times_table - function prints the n
 * times table, starting with 0
-* @n: number of the times table
+* @n: no of the times table
 */
-int print_times_table(int n)
+void print_times_table(int no)
 {
-	int i, j, k;
+	int ina, jar, kar;
 
-	if (n >= 0 && n <= 15)
+	if (no >= 0 && no <= 15)
 	{
-	for (i = 0; i <= n; i++)
+	for (ina = 0; ina <= no; ina++)
 	{
-	for (j = 0; j <= n; j++)
+	for (jar = 0; jar <= no; jar++)
 	{
-	k = j * i;
+	kar = jar * ina;
 	
-	if (j == 0)
+	if (jar == 0)
 	{
-	_putchar(k + '0');
+	_putchar(kar + '0');
 	}
-	else if (k < 10 && j != 0)
+	else if (kar < 10 && jar != 0)
 	{
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
 	_putchar(' ');
-	_putchar(k + '0');
+	_putchar(kar + '0');
 	}
-	else if (k >= 10 && k < 100)
+	else if (kar >= 10 && kar < 100)
 	{
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
-	_putchar((k / 10) + '0');
-	_putchar((k % 10) + '0');
+	_putchar((kar / 10) + '0');
+	_putchar((kar % 10) + '0');
 	}
-	else if (k >= 100)
+	else if (kar >= 100)
 	{
 	_putchar(',');
 	_putchar(' ');
-	_putchar((k / 100) + '0');
-	_putchar(((k / 10) % 10) + '0');
-	_putchar((k % 10) + '0');
+	_putchar((kar / 100) + '0');
+	_putchar(((kar / 10) % 10) + '0');
+	_putchar((kar % 10) + '0');
 	}
 	}
 	_putchar('\n');
