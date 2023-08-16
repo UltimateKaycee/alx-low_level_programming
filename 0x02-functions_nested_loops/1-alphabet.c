@@ -8,7 +8,9 @@
 */
 
 void print_alphabet(void)
-
+/**
+ * Description: function to print lowercase alphabets
+ */
 {
 	char cha;
 
