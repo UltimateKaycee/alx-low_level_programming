@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* main - Entry point
+* print_alphabet_x10 - Entry point
 * Description: program to print_alphabet_x10 in lowercase.
 *
 * Return: Always 0 (success)
