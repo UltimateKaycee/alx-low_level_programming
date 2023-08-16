@@ -3,7 +3,6 @@
 * main - function that causes an infinite loop
 * Return: Always 0 (success)
 */
-
 int main(void)
 {
 	int vai;
@@ -14,7 +13,7 @@ int main(void)
 
 	/* while (vai < 10)*/
 	/* {*/
-	/*	putchar(vai);*/
+	/* putchar(vai);*/
 	/* }*/
 
 	printf("Infinite loop avoided! \\o/\n");
