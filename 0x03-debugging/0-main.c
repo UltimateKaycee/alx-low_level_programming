@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* main - function checks to see that positive or
+* main - function checks for positive or
 * negative and gives correct output
 * @vai: first element
 *
@@ -13,5 +13,6 @@ int main(void)
 	vai = 0;
 
 	positive_or_negative(vai);
+
 	return (0);
 }
