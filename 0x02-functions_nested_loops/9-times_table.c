@@ -4,6 +4,8 @@
 * @ina: first element
 * @jar: second element
 * @kar: third element
+*
+* Return: Always 0 (success)
 */
 void times_table(void)
 {
@@ -24,7 +26,7 @@ void times_table(void)
 	_putchar(' ');
 	_putchar(' ');
 	_putchar(kar + '0');
-	} 
+	}
 	else if (kar >= 10)
 	{
 	_putchar(',');
