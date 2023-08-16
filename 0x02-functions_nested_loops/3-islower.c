@@ -5,7 +5,7 @@
 * @ch:int
 * _islower:int
 * Return: @ch value
-* 
+*
 */
 int _islower(int ch)
 {
