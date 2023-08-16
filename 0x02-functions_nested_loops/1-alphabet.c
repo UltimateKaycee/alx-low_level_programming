@@ -9,10 +9,6 @@
 */
 
 void print_alphabet(void)
-/* @parameter: none
- * 
- * Description: function to print lowercase alphabets
- */
 {
 	char cha;
 
