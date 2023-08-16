@@ -9,7 +9,7 @@ void jack_bauer(void)
 
 	ina = 0;
 
-	while (i < 24)
+	while (ina < 24)
 	{
 	jar = 0;
 
