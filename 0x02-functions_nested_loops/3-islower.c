@@ -2,8 +2,10 @@
 /**
 * main - Entry point
 * Description: function that checks for lowercase characters and returns 1 or 0
-* @c:int
-* Return: @c value
+* @ch:int
+* _islower:int
+* Return: @ch value
+* 
 */
 int _islower(int ch)
 {
