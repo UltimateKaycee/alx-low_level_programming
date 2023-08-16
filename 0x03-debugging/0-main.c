@@ -1,7 +1,9 @@
 #include "main.h"
 /**
-* main - function checks to see that positive or negative
-* gives correct output
+* main - function checks to see that positive or
+* negative and gives correct output
+* @vai: first element
+*
 * Return: Always 0 (success)
 */
 int main(void)
@@ -11,6 +13,5 @@ int main(void)
 	vai = 0;
 
 	positive_or_negative(vai);
-
 	return (0);
 }
