@@ -3,7 +3,6 @@
 * times_table - prints the 9 times table, starting with 0
 * @ina: first element
 * @jar: second element
-* @kar: third element
 *
 * Return: Always 0 (success)
 */
