@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
 * main - function that causes an infinite loop
+* @vai: first variable
 * Return: Always 0 (success)
 */
 int main(void)
