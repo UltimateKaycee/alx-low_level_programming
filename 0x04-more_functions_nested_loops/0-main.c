@@ -3,18 +3,18 @@
 
 /**
  * main - checks code.
- * @rood: variable
+ * @rooc: variable
  * Return: 1 if rood is uppercase and 0 otherwise.
  */
 int main(void)
 {
-    char rood;
+    char rooc;
 
-    rood = 'A';
+    rooc = 'A';
 
-    printf("%c: %d\n", rood, _isupper(rood));
-    rood = 'a';
+    printf("%c: %d\n", rooc, _isupper(rooc));
+    rooc = 'a';
 
-    printf("%c: %d\n", rood, _isupper(rood));
+    printf("%c: %d\n", rooc, _isupper(rooc));
     return (0);
 }

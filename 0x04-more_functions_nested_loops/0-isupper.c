@@ -3,13 +3,13 @@
 /**
  *_isupper - This is a function that checks
  * for uppercase characters
- * @rood: variable to store letters
- * Return: a value of 1 if the variable rood
+ * @rooc: variable to store letters
+ * Return: a value of 1 if the variable rooc
  * contains an uppercase letter.
  */
-int _isupper(int rood)
+int _isupper(int rooc)
 {
-	if (rood >= 'A' && rood <= 'Z')
+	if (rooc >= 'A' && rooc <= 'Z')
 	{
 	return (1);
 	}
