@@ -4,7 +4,7 @@
 /**
  * main - checks code.
  * @rood: variable
- * Return: Always 0.
+ * Return: 1 if rood is uppercase and 0 otherwise.
  */
 int main(void)
 {
