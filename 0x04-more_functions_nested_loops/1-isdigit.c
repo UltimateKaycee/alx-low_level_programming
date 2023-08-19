@@ -8,12 +8,15 @@
  */
 int _isdigit(int rooc)
 {
-	if (rooc >= 48 && rooc <= 57)
-
+	for (rooc = 0; rooc < 9; rooc++)
+	{
+	if (rooc == "%d")
+	{
 	return (1);
 	}
 	else
 	{
 	return (0);
+	}
 	}
 }
