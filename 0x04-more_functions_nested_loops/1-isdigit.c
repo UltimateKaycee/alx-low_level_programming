@@ -10,7 +10,7 @@ int _isdigit(int rooc)
 {
 	for (rooc = 0; rooc < 9; rooc++)
 	{
-	if (rooc == "%d")
+	if (rooc == rooc "%d")
 	{
 	return (1);
 	}
