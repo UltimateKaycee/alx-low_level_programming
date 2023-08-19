@@ -5,14 +5,13 @@
  * Description: function to print fizz for multiples of 3,
  * Buzz for multiples of 5, and
  * 3 and 5 for multiples of both 3 and 5.
- *
  * Return: 0
  */
 int main(void)
 {
 	int bright;
 	bright = 1;
-	
+
 	while (bright <= 100)
 	{
 	if (bright % 3 == 0 && bright % 5 == 0)
@@ -26,7 +25,7 @@ int main(void)
 	if (bright != 100)
 	printf(" ");
 	bright++;
-	
+
 	}
 	printf("\n");
 	return (0);
