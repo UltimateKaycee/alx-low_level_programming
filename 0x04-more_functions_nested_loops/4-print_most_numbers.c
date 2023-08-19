@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * print_most_numbers - function prints the
+ * print_most_numbers - function prints
  * numbers from 0 to 9, followed by a new line
  * @bright: parameter
- *
  * Return: nothing
  */
 void print_most_numbers(void)
