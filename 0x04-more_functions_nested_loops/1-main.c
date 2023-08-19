@@ -3,7 +3,6 @@
 
 /**
  * main - function checks code
- * @rooc: element
  *
  * Return: Always 0.
  */
