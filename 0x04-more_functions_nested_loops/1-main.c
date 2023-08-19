@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - checks code
- * @rooc: parameter
+ * main - function checks code
+ * @rooc: element
  *
  * Return: Always 0.
  */
