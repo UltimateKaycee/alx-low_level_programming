@@ -8,7 +8,7 @@
  */
 int _isdigit(int rooc)
 {
-	if (rooc >= 0 && rooc <= 9)
+	if (rooc >= "0" && rooc <= "9")
 
 	return (1);
 	}
