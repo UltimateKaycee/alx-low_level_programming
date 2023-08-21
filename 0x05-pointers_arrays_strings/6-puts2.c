@@ -14,10 +14,10 @@ void puts2(char *words)
 	int nice, fine;
 
 	for (nice = 0; words[nice] != '\0'; nice++)
-	{
+{
 	;
 	}
-	for (nice = 0; fine < nice; fine += 2)
+	for (fine = 0; fine < nice; fine += 2)
 	{
 	_putchar(words[fine]);
 	}
