@@ -1,0 +1,12 @@
+int _putchar(char character);
+void reset_to_98(int *number);
+void swap_int(int *hard, int *herbal);
+int _strlen(char *brook);
+void _puts(char *stringer);
+void print_rev(char *brook);
+void rev_string(char *brook);
+void puts2(char *stringer);
+void puts_half(char *stringer);
+void print_array(int *hard, int number);
+char *_strcpy(char *destiner, char *sourcer);
+int _atoi(char *brook);
