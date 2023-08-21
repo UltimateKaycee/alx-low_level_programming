@@ -2,7 +2,7 @@
 
 /**
  * swap_int - function that swaps the values of two integers
- * 
+ *
  * @hard: int pointer variable
  * @soft: another int pointer variable
  * Return: nothing
