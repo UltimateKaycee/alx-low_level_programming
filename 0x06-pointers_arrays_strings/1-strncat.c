@@ -17,7 +17,7 @@ char *_strncat(char *dest, char *src, int blink)
 	for (dash = 0; src[dash] != '\0' && blink > 0; dash++, blink--, high++)
 	{
 	dest[high] = src[dash];
-	
+
 	}
 	return (dest);
 }
