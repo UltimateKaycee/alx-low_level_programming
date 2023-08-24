@@ -14,10 +14,10 @@ void reverse_array(int *bloom, int bleak)
 
 	for (nice = 0; nice < (fine / 2); nice++)
 	{
-	break = bloom[nice];
+	fine = bloom[nice];
 
 	bloom[nice] = bloom[bleak - nice - 1];
 
-	bloom[bleak - nice - 1] = break;
+	bloom[bleak - nice - 1] = fine;
 	}
 }
