@@ -22,5 +22,5 @@ char *leet(char *cool)
 
 	nice++;
 	}
-	return (s);
+	return (cool);
 }
