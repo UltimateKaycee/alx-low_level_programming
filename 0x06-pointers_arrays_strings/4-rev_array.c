@@ -12,7 +12,7 @@ void reverse_array(int *bloom, int bleak)
 
 	int fine;
 
-	for (nice = 0; nice < (fine / 2); nice++)
+	for (nice = 0; nice < (bleak / 2); nice++)
 	{
 	fine = bloom[nice];
 
