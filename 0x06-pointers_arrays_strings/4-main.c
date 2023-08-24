@@ -3,40 +3,40 @@
 
 /**
  * main - function checks code
- * @a: an array of integers
- * @n: the number of elements to swap
+ * @bloom: an array of integers
+ * @bleak: the number of elements to swap
  *
  * Return: nothing.
  */
-void print_array(int *a, int n)
+void print_array(int *bloom, int bleak)
 {
-    int i;
+    int nice;
     
-    i = 0;
+    nice = 0;
     
-    while (i < n)
+    while (nice < bleak)
     {
-     if (i != 0)
+     if (nice != 0)
      {
       printf(", ");
       }
-     printf("%d", a[i]);
-     i++;
+     printf("%d", bloom[nice]);
+     nice++;
     }
     printf("\n");
 }
 
 /**
- * main - check the code
+ * main - function checks code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
+    int bloom[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
 
-    print_array(a, sizeof(a) / sizeof(int));
-    reverse_array(a, sizeof(a) / sizeof(int));
-    print_array(a, sizeof(a) / sizeof(int));
+    print_array(bloom, sizeof(bloom) / sizeof(int));
+    reverse_array(bloom, sizeof(bloom) / sizeof(int));
+    print_array(bloom, sizeof(bloom) / sizeof(int));
     return (0);
 }
