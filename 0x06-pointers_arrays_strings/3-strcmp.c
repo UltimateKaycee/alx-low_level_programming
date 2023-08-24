@@ -3,7 +3,7 @@
 /**
  * _strcmp - a function that will compare two strings
  *
- * @str1: pointer variable of pointer 
+ * @str1: pointer variable of pointer
  * @str2: pointer variable of pointer
  *
  * Return: integer as exit status
