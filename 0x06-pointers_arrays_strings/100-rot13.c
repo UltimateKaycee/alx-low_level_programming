@@ -6,6 +6,7 @@
  *
  * Return: the resulting string
  */
+
 char *rot13(char *cool)
 {
 	int nice, fine;
@@ -23,6 +24,7 @@ char *rot13(char *cool)
 	cool[nice] = arr2[fine];
 
 	break;
+
 	}
 	}
 	}
