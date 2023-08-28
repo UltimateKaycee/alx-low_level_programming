@@ -12,7 +12,9 @@ int match_found(char *gloom, char *num)
 {
 	if (*gloom == *num)
 	return (1);
+
 	else
+
 	return (0);
 }
 
@@ -57,5 +59,6 @@ char *_strstr(char *haystack, char *needle)
 	}
 	if (needle[0] == '\0')
 	return (haystack);
+
 	return ('\0');
 }
