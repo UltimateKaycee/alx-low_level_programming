@@ -24,9 +24,12 @@ void print_chessboard(char (*arr)[8])
 	_putchar('\n');
 	}
 	else
+
 	_putchar(arr[row][col]);
 
 	col++;
+
 	}
+
 	row++;
 }
