@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * print_diagsumis - function that prints sum of two
+ * print_diagsumis - function to prints sum of two
  * diagonals in a square matrix of ints
  * @arr: the pointer to 2d array
- * @size: the number of columns in each row of the array
+ * @size: number of columns in each row of the array
  * Return: nothing
  */
 void print_diagsums(int *arr, int size)
