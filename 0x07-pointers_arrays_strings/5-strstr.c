@@ -40,7 +40,7 @@ char *_strstr(char *haystack, char *needle)
 	match = match_found((haystack + catch), (needle + num));
 	if (needle[num + 1] == '\0' && match == 1)
 	{
-	if (*needle == haystack[gloomh])
+	if (*needle == haystack[gloom])
 	return (haystack + gloom);
 	}
 	num++;
