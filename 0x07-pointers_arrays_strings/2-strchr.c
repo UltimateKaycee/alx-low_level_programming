@@ -19,7 +19,7 @@ char *_strchr(char *bloom, char chtr)
 	{
 	bloom = bloom + free;
 
-	return (s);
+	return (bloom);
 	}
 	free++;
 	}
