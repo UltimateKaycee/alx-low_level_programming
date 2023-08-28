@@ -2,10 +2,12 @@
 #include <stdio.h>
 
 /**
- * print_diagsumis - function to prints sum of two
+ * print_diagsumis - function to prints
+ * sum of two
  * diagonals in a square matrix of ints
  * @arr: the pointer to 2d array
- * @size: number of columns in each row of the array
+ * @size: number of columns in each row
+ * of the array
  * Return: nothing
  */
 void print_diagsums(int *arr, int size)
@@ -25,6 +27,7 @@ void print_diagsums(int *arr, int size)
 	hit = hit + size + 1;
 
 	count++;
+
 	}
 	printf("%d, ", sum);
 
@@ -34,6 +37,7 @@ void print_diagsums(int *arr, int size)
 
 	while (count < size)
 	{
+
 	arr = arr + size - 1;
 
 	sum = sum + *(arr + size - 1);
