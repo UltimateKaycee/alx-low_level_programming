@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * print_chessboard - function to print an
- * array of characters as a chessboard
- * @arr1: array to be printed
+ * print_chessboard - prints an array of chars as a chessboard
+ * @a: the array to be printed
  * Return: nothing
  */
-void print_chessboard(char (*arr1)[8])
+void print_chessboard(char (*a)[8])
 {
 	int row = 0;
 
@@ -20,16 +19,12 @@ void print_chessboard(char (*arr1)[8])
 	{
 	if (col == 7)
 	{
-	_putchar(arr1[row][col]);
-
+	_putchar(a[row][col]);
 	_putchar('\n');
 	}
 	else
-
-	_putchar(arr1[row][col]);
-
+	_putchar(a[row][col]);
 	col++;
-	
 	}
 	row++;
 }
