@@ -3,18 +3,19 @@
 
 /**
  * main - function prints minimum number of coins
- *	to make change for an amount of money
+ * to make change for an amount of money
  * @argc: number of arguments given to program
  * @argv: array of pointers to arguments
  *
  * Return: 1 If number of arguments is not
- *	exactly one Otherwise 0
+ * exactly one Otherwise 0
  */
+
 int main(int argc, char *argv[])
 {
 	int namt, change = 0;
 
-	if (argc != 2)
+	if (argc == 1 || argc > 2)
 	{
 	printf("Error\n");
 	return (1);
@@ -23,40 +24,24 @@ int main(int argc, char *argv[])
 
 	while (namt > 0)
 	{
-	change++;
-	
-	if ((namt - 25) >= 0)
-	{
+	if (namt >= 25)
 	namt -= 25;
 
-	continue;
-
-	}
-	if ((namt - 10) >= 0)
-	{
+	else if (namt >= 10)
 	namt -= 10;
 
-	continue;
-
-	}
-	if ((namt - 5) >= 0)
-	{
+	else if (namt >= 5)
 	namt -= 5;
 
-	continue;
-
-	}
-	if ((namt - 2) >= 0)
-	{
+	else if (namt >= 2)
 	namt -= 2;
 
-	continue;
+	else if (namt >= 1)
+	namt -= 1;
 
-	}
-	namt--;
+	change += 1;
 
 	}
 	printf("%d\n", change);
-
 	return (0);
 }
