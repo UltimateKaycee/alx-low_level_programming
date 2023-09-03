@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- * main - function prints minimum number of
- * coins to make change for an amount of money
- * @argc: number of arguments given to program.
- * @argv: array of pointers to arguments.
+ * main - function prints minimum number of coins
+ *	to make change for an amount of money
+ * @argc: number of arguments given to program
+ * @argv: array of pointers to arguments
  *
  * Return: 1 If number of arguments is not
- * exactly one Otherwise - 0.
+ *	exactly one Otherwise 0
  */
 int main(int argc, char *argv[])
 {
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	while (namt > 0)
 	{
 	change++;
-
+	
 	if ((namt - 25) >= 0)
 	{
 	namt -= 25;
@@ -57,5 +57,6 @@ int main(int argc, char *argv[])
 
 	}
 	printf("%d\n", change);
+
 	return (0);
 }
