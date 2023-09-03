@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
 	return (1);
 	}
 	namt = atoi(argv[1]);
-	
+
 	while (namt > 0)
 	{
 	change++;
-	
+
 	if ((namt - 25) >= 0)
 	{
 	namt -= 25;
@@ -46,11 +46,11 @@ int main(int argc, char *argv[])
 	if ((namt - 2) >= 0)
 	{
 	namt -= 2;
-	
+
 	continue;
 	}
 	namt--;
-	
+
 	}
 	printf("%d\n", change);
 	return (0);
