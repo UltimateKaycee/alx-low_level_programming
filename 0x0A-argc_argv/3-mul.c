@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
 	}
 
 	first = atoi(argv[1]);
-	
+
 	second = atoi(argv[2]);
-	
+
 	third = first * second;
 
 	printf("%d\n", third);
