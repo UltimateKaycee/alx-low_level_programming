@@ -30,24 +30,28 @@ int main(int argc, char *argv[])
 	namt -= 25;
 
 	continue;
+
 	}
 	if ((namt - 10) >= 0)
 	{
 	namt -= 10;
 
 	continue;
+
 	}
 	if ((namt - 5) >= 0)
 	{
 	namt -= 5;
 
 	continue;
+
 	}
 	if ((namt - 2) >= 0)
 	{
 	namt -= 2;
 
 	continue;
+
 	}
 	namt--;
 
