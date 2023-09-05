@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * wordcounter - function to count words and letters in them
+ * wordcounter - function to count words and
+ * letters in them
  * @str: string to count
  * @posi: position of word to count characters in
  * @char1: position of first letter of word
@@ -10,7 +11,8 @@
  * else count number of words
  * Return: wordcount if posi is 0,
  * length of word if posi greater than 0,
- * position of word if pos greater than 0 && firstchar greater than 0
+ * position of word if pos greater than 0 &&
+ * firstchar greater than 0
  */
 int wordcounter(char *str, int posi, char char1)
 {
@@ -39,9 +41,9 @@ int wordcounter(char *str, int posi, char char1)
 	}
 	return (wordcount);
 }
-
 /**
- * strtow - function to convert a string into a 2d array of words
+ * strtow - function to convert a string into
+ * a 2d array of words
  * @str: string to convert
  * Return: double pointer to 2d array
  */
@@ -56,6 +58,7 @@ char **strtow(char *str)
 	if (str == NULL)
 	return (NULL);
 	wc = wordcounter(str, 0, 0);
+
 	if (len == 0 || wc == 0)
 	return (NULL);
 	beef = malloc((wc + 1) * sizeof(void *));
@@ -66,6 +69,7 @@ char **strtow(char *str)
 	{
 	/* memory for nested elements */
 	wordlen = wordcounter(str, a + 1, 0);
+
 	if (a == 0 && str[a] != ' ')
 	wordlen++;
 	beef[a] = malloc(wordlen * sizeof(char) + 1);
@@ -77,7 +81,7 @@ char **strtow(char *str)
 	free(beef);
 	return (NULL);
 	}
-	/* initialize each element of the nested array with the word*/
+	/* initialize each element of nested array with word*/
 	getfirstchar = wordcounter(str, a + 1, 1);
 
 	if (str[0] != ' ' && a > 0)
