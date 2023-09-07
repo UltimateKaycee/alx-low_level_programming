@@ -1,73 +1,56 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
 /**
- * _isdigit - function to tell if the string
- * consists of digits
- * @argv: pointer to current item in argument
- * Return: return 0 if all digits, 1 if not all digits.
- */
-int _isdigit(char *argv)
-{
-	int a;
-
-	a = 0;
-
-	while (argv[a])
-	{
-	if (argv[a] >= '0' && argv[a] <= '9')
-	a++;
-	else
-	return (1);
-	}
-	return (0);
-}
-/**
- * _atoi - function to convert a string of ascii
- * digits to the values they represent
- * @str: pointer to the source string
- * Return: value of digits
- */
-int _atoi(char *str)
-{
-	int a, result;
-
-	a = result = 0;
-
-	while (str[a])
-	{
-	if (str[a] >= '0' && str[a] <= '9')
-	{
-	result *= 10;
-	result += (str[a] - '0');
-	}
-	a++;
-	}
-	return (result);
-}
-/**
- * main - the maiin function call
- * @argc: argument count
- * @argv: 2-D array of arguments
- * Return: return 0 on success, 98 on failure
+ * main - function muultiplies two positive numbers.
+ * @argv: number of arguments passed to function
+ * @argc: array of pointers to the arguments.
+ *
+ * Description: If number of arguments is incorrect or one number
+ * contains non-digits, function exits with a status of 98.
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
-	int a;
+	char *final_prod, *next_prod;
 
-	malloc();
+	int size, index, digit, zeroes = 0;
+
 	if (argc != 3)
 	{
 	printf("Error\n");
 	exit(98);
 	}
-	for (a = 1; a < argc; a++)
+	if (*(argv[1]) == '0')
+
+	argv[1] = iterate_zeroes(argv[1]);
+
+	if (*(argv[2]) == '0')
+	argv[2] = iterate_zeroes(argv[2]);
+	if (*(argv[1]) == '\0' || *(argv[2]) == '\0')
 	{
-	if (_isdigit(argv[a]))
+	printf("0\n");
+	return (0);
+	}
+	size = find_len(argv[1]) + find_len(argv[2]);
+
+	final_prod = create_xarray(size + 1);
+
+	next_prod = create_xarray(size + 1);
+	for (index = find_len(argv[2]) - 1; index >= 0; index--)
 	{
-	printf("Error\n");
-	exit(98);
+	digit = get_digit(*(argv[2] + index));
+
+	get_prod(next_prod, argv[1], digit, zeroes++);
+	add_nums(final_prod, next_prod, size - 1);
 	}
+	for (index = 0; final_prod[index]; index++)
+	{
+	if (final_prod[index] != 'x')
+	putchar(final_prod[index]);
 	}
+	putchar('\n');
+	free(next_prod);
+	free(final_prod);
 	return (0);
 }
