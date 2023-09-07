@@ -1,19 +1,20 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
+
 /**
- * string_nconcat - function concatenates two strings
- * up to n bytes.
- * @str1: source string
- * @str2: string to truncate up to num bytes
- * @num: number of bytes to truncate by
- * Return: pointer to new buffer
+ * string_nconcat - function to concatenate two strings
+ * using at most an input number of bytes.
+ * @str1: first string.
+ * @str2: second string.
+ * @num: maximum number of bytes of str2 to concatenate to str1.
+ * Return: If the function fails - NULL.
+ * Otherwise - a pointer to the concatenated space in memory.
  */
 char *string_nconcat(char *str1, char *str2, unsigned int num)
 {
-	char *beef;
+	char *concat;
 
-	unsigned int str1count, str2count, sizeBuffer, a;
+	unsigned int len = num, index;
 
 	if (str1 == NULL)
 	str1 = "";
@@ -21,20 +22,21 @@ char *string_nconcat(char *str1, char *str2, unsigned int num)
 	if (str2 == NULL)
 	str2 = "";
 
-	for (str1count = 0; str1[str1count]; str1count++)
-	;
-	for (str2count = 0; str2[str2count]; str2count++)
-	;
-	str2count > num ? (str2count = num) : (num = str2count);
-	sizeBuffer = str1count + str2count + 1;
+	for (index = 0; str1[index]; index++)
+	len++;
+	concat = malloc(sizeof(char) * (len + 1));
 
-	beef = malloc(sizeBuffer * sizeof(char));
-
-	if (beef == NULL)
+	if (concat == NULL)
 	return (NULL);
-	for (a = 0; a < sizeBuffer - 1; a++)
-	a < str1count ? (beef[a] = str1[a]) : (beef[a] = str2[a - str1count]);
+	len = 0;
 
-	beef[sizeBuffer] = '\0';
-	return (beef);
+	for (index = 0; str1[index]; index++)
+	concat[len++] = str1[index];
+
+	for (index = 0; str2[index] && index < num; index++)
+	concat[len++] = str2[index];
+
+	concat[len] = '\0';
+
+	return (concat);
 }
