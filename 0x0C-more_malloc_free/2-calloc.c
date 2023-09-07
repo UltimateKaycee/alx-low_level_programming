@@ -1,25 +1,32 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+
 /**
- * _calloc - function allocates memory for an initialized buffer
- * @numemby: number of memory bytes
- * @size: number of data type bits
- * Return: return pointer to initialized buffer
+ * _calloc - function allocates memory for an array of a
+ * certain number of elements each of an inputted byte size.
+ * @numemby: number of elements.
+ * @size: byte size of each array element.
+ * Return: If numemby = 0, size = 0, or function fails - NULL.
+ * Otherwise - a pointer to the allocated memory.
  */
 void *_calloc(unsigned int numemby, unsigned int size)
 {
-	int *arc;
+	void *mem;
 
-	unsigned int a;
+	char *filler;
+
+	unsigned int index;
 
 	if (numemby == 0 || size == 0)
 	return (NULL);
-	arc = malloc(size * numemby);
+	mem = malloc(size * numemby);
 
-	if (arc == NULL)
+	if (mem == NULL)
 	return (NULL);
-	for (a = 0; a < numemby ; a++)
-	arc[a] = 0;
+	filler = mem;
 
-	return (arc);
+	for (index = 0; index < (size * numemby); index++)
+	filler[index] = '\0';
+
+	return (mem);
 }
