@@ -9,7 +9,8 @@ void get_prod(char *prod, char *mult, int digit, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
- * find_len - function fto finds the length of a string.
+ * find_len - function fto finds the length of
+ * a string.
  * @str: The string to be measured.
  * Return: The length of the string.
  */
@@ -24,8 +25,9 @@ int find_len(char *str)
 }
 
 /**
- * create_xarray - function to create an array of chars and
- * initialize it with character 'x'. Adds terminating null byte.
+ * create_xarray - function to create an array
+ * of chars and initialize it with character
+ * 'x'. Adds terminating null byte.
  * @size: size of the array to be initialized.
  * Description: If there is insufficient space,
  * function exits with a status of 98.
@@ -49,9 +51,9 @@ char *create_xarray(int size)
 }
 
 /**
- * iterate_zeroes - function to iterate through a string
- * of numbers having leading zeroes until it hits
- * a non-zero number.
+ * iterate_zeroes - function to iterate through
+ * a string of numbers having leading zeroes
+ * until it hits a non-zero number.
  * @str: The string of numbers to be iterate through.
  * Return: A pointer to the next non-zero element.
  */
@@ -134,7 +136,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 
 /**
  * add_nums - Adds the numbers stored in two strings.
- * @final_prod: The buffer storing the running final product.
+ * @final_prod: buffer storing the running final product.
  * @next_prod: The next product to be added.
  * @next_len: The length of next_prod.
  */
@@ -181,8 +183,9 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  * main - function to multiply two positive numbers.
  * @argv: number of arguments passed to the program.
  * @argc: array of pointers to the arguments.
- * Description: If the number of arguments is incorrect or one number
- * contains non-digits, the function exits with a status of 98.
+ * Description: If the number of arguments is incorrect
+ * or one number contains non-digits, the function
+ * exits with a status of 98.
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
