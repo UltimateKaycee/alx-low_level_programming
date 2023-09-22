@@ -14,7 +14,8 @@ size_t print_list(const list_t *ann)
 	for (bean = 0; ann; bean++)
 	{
 	printf("[%d] %s\n", ann->len, ann->str);
-		ann = ann->next;
+	ann = ann->next;
+
 	}
 	return (bean);
 }
