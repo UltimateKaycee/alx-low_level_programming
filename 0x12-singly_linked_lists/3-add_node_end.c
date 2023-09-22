@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
-
 /**
  * _strlen - function to get length
  * of the string
@@ -59,14 +58,17 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (str == NULL)
 	return (NULL);
+
 	dupstr = _strdup(str);
 
 	if (dupstr == NULL)
 	return (NULL);
+
 	new = malloc(sizeof(list_t));
 
 	if (new == NULL)
 	return (NULL);
+
 	new->str = dupstr;
 
 	new->len = _strlen(str);
@@ -82,6 +84,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	current = *head;
 
 	while (current->next != NULL)
+
 	current = current->next;
 
 	current->next = new;
