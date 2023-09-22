@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stddef.h>
 /**
- * _strlen - function gets length of
- * the string
+ * _strlen - function to get length
+ * of the string
  * @str: string
  * Return: length of the string
  */
@@ -17,8 +17,8 @@ int _strlen(const char *str)
 	return (organ);
 }
 /**
- * _strdup - function for recreation of string
- * duplicate function
+ * _strdup - function for recreation of
+ * string duplicate function
  * @src: source of string to duplicate
  * Return: pointer to malloc'd space with
  * copied string
@@ -39,12 +39,11 @@ void *_strdup(const char *src)
 	dest[organ] = src[organ];
 
 	dest[organ] = '\0';
-
 	return (dest);
 }
 /**
- * add_node_end - add new nodes to the
- * end of the list
+ * add_node_end - function to add new nodes
+ * to the end of the list
  * @head: current node (place) in the list
  * @str: string to add to the head
  * Return: pointer to current position in list
