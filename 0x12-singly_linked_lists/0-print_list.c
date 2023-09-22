@@ -1,21 +1,30 @@
-#include <stdio.h>
 #include "lists.h"
-#include <stdlib.h>
+#include <stdio.h>
+
 /**
-  * print_list - function to print all elements
-  * of a list_t list
-  * @ann: singly linked list to print
-  * Return: number of nodes in the list
-  */
+ * print_list - function to print all
+ * the elements of a list_t list.
+ * @ann: The list_t list to be printed.
+ *
+ * Return: number of nodes in ann.
+ */
+
 size_t print_list(const list_t *ann)
 {
-	size_t bean;
+	size_t nodes = 0;
 
-	for (bean = 0; ann; bean++)
+	while (ann)
 	{
-	printf("[%d] %s\n", ann->len, ann->str);
+	if (ann->str == NULL)
+	printf("[0] (nil)\n");
+
+	else
+	printf("[%d] %s\n", h->len, h->str);
+
+	nodes++;
 	ann = ann->next;
 
 	}
-	return (bean);
+
+	return (nodes);
 }
