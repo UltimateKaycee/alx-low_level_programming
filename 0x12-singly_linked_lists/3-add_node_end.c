@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
+
 /**
  * _strlen - function to get length
  * of the string
@@ -16,6 +17,7 @@ int _strlen(const char *str)
 	;
 	return (organ);
 }
+
 /**
  * _strdup - function for recreation of
  * string duplicate function
@@ -41,6 +43,7 @@ void *_strdup(const char *src)
 	dest[organ] = '\0';
 	return (dest);
 }
+
 /**
  * add_node_end - function to add new nodes
  * to the end of the list
