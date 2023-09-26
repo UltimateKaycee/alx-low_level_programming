@@ -17,7 +17,7 @@ size_t print_listint(const listint_t *start)
 
 	nodes++;
 
-	printf("%d\n", start->go);
+	printf("%d\n", start->n);
 
 	start = start->next;
 
