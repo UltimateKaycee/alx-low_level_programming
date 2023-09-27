@@ -4,8 +4,9 @@ size_t looped_listint_count(listint_t *head);
 size_t free_listint_safe(listint_t **h);
 
 /**
- * looped_listint_count - function to count num of unique
- * nodes in a looped listint_t linked list.
+ * looped_listint_count - function to count
+ * num of unique nodes in a
+ * looped listint_t linked list.
  * @head: ptr to head of listint_t to check.
  *
  * Return: 0 if list isn't looped
@@ -33,6 +34,7 @@ size_t looped_listint_count(listint_t *head)
 	while (drain != card)
 	{
 	nodes++;
+
 	drain = drain->next;
 
 	card = card->next;
@@ -62,8 +64,9 @@ size_t looped_listint_count(listint_t *head)
 }
 
 /**
- * free_listint_safe - function to free a listint_t list
- * safely - can free lists containing loops)
+ * free_listint_safe - function to free a
+ * listint_t list safely - can free
+ * lists containing loops)
  * @h: pointer to the address of
  * the head of listint_t
  *
