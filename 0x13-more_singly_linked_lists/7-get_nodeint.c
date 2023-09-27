@@ -12,7 +12,6 @@
  */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int begin)
-	
 {
 	unsigned int node;
 
@@ -22,6 +21,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int begin)
 	return (NULL);
 
 	head = head->next;
+
 	}
 
 	return (head);
