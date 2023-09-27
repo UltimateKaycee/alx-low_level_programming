@@ -20,11 +20,12 @@ listint_t *reverse_listint(listint_t **head)
 	{
 	front = (*head)->next;
 
-	(*head)->next = behind;
+	(*head)->next = back;
 
 	back = *head;
 
 	*head = front;
+
 	}
 
 	(*head)->next = back;
