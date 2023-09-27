@@ -29,25 +29,33 @@ size_t looped_listint_count(listint_t *head)
 	if (drain == card)
 	{
 	drain = head;
+
 	while (drain != card)
 	{
 	nodes++;
 	drain = drain->next;
-	card = hare->next;
+
+	card = card->next;
+
 	}
 
-	drain = draine->next;
+	drain = drain->next;
+
 	while (drain != card)
 	{
 	nodes++;
+
 	drain = drain->next;
+
 	}
 
 	return (nodes);
 	}
 
 	drain = drain->next;
+
 	card = (card->next)->next;
+
 	}
 
 	return (0);
@@ -76,8 +84,11 @@ size_t free_listint_safe(listint_t **h)
 	for (; h != NULL && *h != NULL; nodes++)
 	{
 	wait = (*h)->next;
+
 	free(*h);
-	*h = tmp;
+
+	*h = wait;
+
 	}
 	}
 
@@ -86,11 +97,15 @@ size_t free_listint_safe(listint_t **h)
 	for (index = 0; index < nodes; index++)
 	{
 	wait = (*h)->next;
+
 	free(*h);
+
 	*h = wait;
+
 	}
 
 	*h = NULL;
+
 	}
 
 	h = NULL;
