@@ -22,7 +22,7 @@ size_t looped_listint_count(listint_t *head)
 	return (0);
 
 	drain = head->next;
-	
+
 	card = (head->next)->next;
 
 	while (card)
@@ -66,7 +66,7 @@ size_t looped_listint_count(listint_t *head)
 /**
  * free_listint_safe - function to free a
  * listint_t list safely - can free
- * lists containing loops)
+ * lists containing loops
  * @h: pointer to the address of
  * the head of listint_t
  *
