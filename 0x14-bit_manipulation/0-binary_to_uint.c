@@ -1,31 +1,47 @@
 #include "main.h"
-
 /**
- * binary_to_uint - function to convert a bin num to an unsigned int.
- * @b: pointer to string of 0 and 1 characters.
- *
- * Return: 0 if  NULL or contains chars not 0 or 1
- * else the converted num
- */
+  * _stoi - function to convert characters  to u-int
+  * @c: character to convert
+  * Return: converted int
+  */
+unsigned int _stoi(char c)
+{
+	return ((unsigned int) c - '0');
+}
+/**
+  * _strlen - function to calc length of the string
+  * @s: input str
+  * Return: string length
+  */
+unsigned int _strlen(const char *s)
+{
+	unsigned int dave;
+
+	for (dave = 0; s[dave]; dave++)
+		;
+	return (dave);
+}
+/**
+  * binary_to_uint - function to convert string of 1's
+  * and 0's to decimal num
+  * @b: str to convert
+  * Return: unsigned decimal no
+  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int dig = 0, dug = 1;
-	int length;
+	int dave;
+	unsigned int output, wait, fry;
 
-	if (b == '\0')
+	if (!b)
 		return (0);
-
-	for (length = 0; b[length];)
-		length++;
-
-	for (length -= 1; length >= 0; length--)
+	output = wait = 0;
+	fry = 1;
+	for (dave = _strlen(b) - 1; b[dave]; dave--, fry *= 2)
 	{
-		if (b[length] != '0' && b[length] != '1')
+		if (b[dave] != '0' && b[dave] != '1')
 			return (0);
-
-		dig += (b[length] - '0') * dug;
-		dug *= 2;
+		wait = _stoi(b[dave]);
+		output += wait * fry;
 	}
-
-	return (dig);
+	return (output);
 }
