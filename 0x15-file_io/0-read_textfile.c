@@ -8,7 +8,7 @@
   **/
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int text_file, all, status;
+	int text_file, all, stage;
 	char buffer[BUFSIZE];
 
 	if (filename == NULL)
