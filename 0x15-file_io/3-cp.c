@@ -16,7 +16,7 @@ int main(int ac, char *av[])
 	char buffer[BUFSIZE];
 
 	if (ac != 3)
-	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+	dprintf(STDERR_FILENO, "Usage: cp from_ file to_file\n"), exit(97);
 
 	from_file = open(av[1], O_RDONLY);
 
@@ -40,7 +40,7 @@ int main(int ac, char *av[])
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 	if (status_one > 0)
 	{
-	status_one = write(to_file, buffer, status_one);
+	status_two = write(to_file, buffer, status_one);
 
 	if (status_two != status_one || status_two == -1)
 
