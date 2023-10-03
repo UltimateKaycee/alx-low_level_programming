@@ -1,9 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
-  * append_text_to_file - function to append text to a file
+  * append_text_to_file - function to append text
+  * to a file
   * @filename: file to append text to
-  * @text_content: the content to append to filename
+  * @text_content: the content to append to
+  * filename
   * Return: on success = (1) and on failure = (-1)
   */
 int append_text_to_file(const char *filename, char *text_content)
@@ -12,7 +14,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 	return (-1);
-	
+
 	put_file = open(filename, O_WRONLY | O_APPEND);
 
 	if (put_file == -1)
