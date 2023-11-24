@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
   * get_endianness - function to check endianness
-  * Return: for big endian, zero and for 
+  * Return: for big endian, zero and for
   * for little endian, one
   */
 int get_endianness(void)
