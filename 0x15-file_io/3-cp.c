@@ -53,6 +53,7 @@ void close_file(int fd)
 int main(int argc, char *argv[])
 {
 	int source, dest, reader, writer;
+
 	char *buffer;
 
 	if (argc != 3)
@@ -62,8 +63,11 @@ int main(int argc, char *argv[])
 	}
 
 	buffer = create_buffer(argv[2]);
+
 	source = open(argv[1], O_RDONLY);
+
 	reader = read(source, buffer, 1024);
+
 	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
@@ -76,6 +80,7 @@ int main(int argc, char *argv[])
 		}
 
 		writer = write(dest, buffer, reader);
+
 		if (dest == -1 || writer == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -85,6 +90,7 @@ int main(int argc, char *argv[])
 		}
 
 		reader = read(source, buffer, 1024);
+
 		dest = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (reader > 0);
