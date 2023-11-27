@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * create_buffer - Function to allocate
  * 1024 bytes for a buffer.
@@ -17,8 +16,7 @@ char *create_buffer(char *file)
 
 	if (buffer == NULL)
 	{
-	dprintf(STDERR_FILENO,
-	"Error: Can't write to %s\n", file);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 	exit(99);
 	}
 
@@ -74,8 +72,7 @@ int main(int argc, char *argv[])
 	do {
 	if (source == -1 || reader == -1)
 	{
-	dprintf(STDERR_FILENO,
-	"Error: Can't read from file %s\n", argv[1]);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 	free(buffer);
 	exit(98);
 	}
@@ -84,8 +81,7 @@ int main(int argc, char *argv[])
 
 	if (dest == -1 || writer == -1)
 	{
-	dprintf(STDERR_FILENO,
-	"Error: Can't write to %s\n", argv[2]);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 	free(buffer);
 	exit(99);
 	}
