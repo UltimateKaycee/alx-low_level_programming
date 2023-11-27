@@ -49,7 +49,6 @@ void close_file(int fd)
  * @argv: Array of ptrs for the arguments.
  *
  * Return: If successful - 0.
- *
  */
 int main(int argc, char *argv[])
 {
