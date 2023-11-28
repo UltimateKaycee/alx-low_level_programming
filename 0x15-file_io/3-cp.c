@@ -60,7 +60,6 @@ int main(int argc, char *argv[])
 	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(97);
 	}
-
 	buffer = create_buffer(argv[2]);
 
 	source = open(argv[1], O_RDONLY);
@@ -68,7 +67,6 @@ int main(int argc, char *argv[])
 	reader = read(source, buffer, 1024);
 
 	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
 	do {
 	if (source == -1 || reader == -1)
 	{
@@ -76,7 +74,6 @@ int main(int argc, char *argv[])
 	free(buffer);
 	exit(98);
 	}
-
 	writer = write(dest, buffer, reader);
 
 	if (dest == -1 || writer == -1)
@@ -85,16 +82,13 @@ int main(int argc, char *argv[])
 	free(buffer);
 	exit(99);
 	}
-
 	reader = read(source, buffer, 1024);
 
 	dest = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (reader > 0);
-
 	free(buffer);
 	close_file(source);
 	close_file(dest);
-
 	return (0);
 }
