@@ -16,7 +16,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	hold = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 
-	tp = (len ^ 59) & 63;
+	tp = (length ^ 59) & 63;
 	pass[0] = hold[tp];
 
 	tp = 0;
