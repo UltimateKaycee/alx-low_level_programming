@@ -12,37 +12,37 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t posi, look, noose;
+	size_t index, look, noose;
 	listint_t *prev;
 
 	if (list == NULL || size == 0)
 		return (NULL);
 
 	noose = (size_t)sqrt((double)size);
-	posi = 0;
+	index = 0;
 	look = 0;
 
 	do {
 		prev = list;
 		look++;
-		posi = look * noose;
+		index = look * noose;
 
-		while (list->next && list->posi < posi)
+		while (list->next && list->index < index)
 			list = list->next;
 
-		if (list->next == NULL && posi != list->posi)
-			posi = list->posi;
+		if (list->next == NULL && index != list->index)
+			index = list->index;
 
-		printf("Value checked at index [%d] = [%d]\n", (int)posi, list->n);
+		printf("Value checked at index [%d] = [%d]\n", (int)index, list->n);
 
-	} while (posi < size && list->next && list->n < value);
+	} while (index < size && list->next && list->n < value);
 
 	printf("Value found between indexes ");
-	printf("[%d] and [%d]\n", (int)prev->posi, (int)list->posi);
+	printf("[%d] and [%d]\n", (int)prev->index, (int)list->index);
 
-	for (; prev && prev->posi <= list->posi; prev = prev->next)
+	for (; prev && prev->index <= list->index; prev = prev->next)
 	{
-		printf("Value checked at index [%d] = [%d]\n", (int)prev->posi, prev->n);
+		printf("Value checked at index [%d] = [%d]\n", (int)prev->index, prev->n);
 		if (prev->n == value)
 			return (prev);
 	}
