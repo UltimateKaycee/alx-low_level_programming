@@ -12,14 +12,14 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	int index, noose, look, fore;
+	int index, noose, look, prev;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
 	noose = (int)sqrt((double)size);
 	look = 0;
-	fore = index = 0;
+	prev = index = 0;
 
 	do {
 		printf("Value checked array[%d] = [%d]\n", index, array[index]);
@@ -27,17 +27,17 @@ int jump_search(int *array, size_t size, int value)
 		if (array[index] == value)
 			return (index);
 		look++;
-		fore = index;
+		prev = index;
 		index = look * noose;
 	} while (index < (int)size && array[index] < value);
 
-	printf("Value located  between indexes [%d] and [%d]\n", fore, index);
+	printf("Value located  between indexes [%d] and [%d]\n", prev, index);
 
-	for (; fore <= index && fore < (int)size; fore++)
+	for (; prev <= index && prev < (int)size; prev++)
 	{
-		printf("Value checked array[%d] = [%d]\n", fore, array[fore]);
-		if (array[fore] == value)
-			return (fore);
+		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
+		if (array[prev] == value)
+			return (prev);
 	}
 
 	return (-1);
